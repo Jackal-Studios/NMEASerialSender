@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#323232">
+
+
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="This app in conjunction with a USB-Serial converter can be used to send NMEA packets to legacy devices from the GPS module in your device. The app automatically starts a service so that even if the application is closed location can still be sent. You can also select “always use this app” when connecting the USB-Serial converter, so that as soon as you connect the adapter the data will start flowing. This app is fully open source and you are free to modify it in any way you want. The source code can be found here(гіперссилка на гітхаб). Parts of the serial communication are using code from (ссилка на той серіал терманіл штуку (гітхаб)). This app was developed by Jackal Studios, if you would like to help or just talk to us, you can find us at (email). Here is our bitcoin wallet if you want to donate: 1PjrWPNF2vtEvGiPUUa1xpGHpBnHyCEFk4"
+            android:textColor="#CCCCCC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/search_border"
+            android:text="Back"
+            android:textColor="@drawable/text"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
