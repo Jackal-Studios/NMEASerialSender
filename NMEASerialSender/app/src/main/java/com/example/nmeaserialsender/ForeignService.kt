@@ -57,7 +57,6 @@ class ForegroundService : Service()  {
 
     private var mOnNmeaMessageListener: OnNmeaMessageListener? = null
 
-    private var mLegacyNmeaListener: GpsStatus.NmeaListener? = null
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
@@ -79,23 +78,26 @@ class ForegroundService : Service()  {
 
         startForeground(1, notification)
         //stopSelf();
-        init()
-        locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        m_usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
-        val filter = IntentFilter()
-        filter.addAction(ACTION_USB_PERMISSION)
-        filter.addAction(UsbManager.ACTION_USB_ACCESSORY_ATTACHED)
-        filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED)
-        registerReceiver(broadcastReceiver,filter)
         try {
-            startUsbConnecting()
+            init()
+            locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+            m_usbManager = getSystemService(Context.USB_SERVICE) as UsbManager
+            val filter = IntentFilter()
+            filter.addAction(ACTION_USB_PERMISSION)
+            filter.addAction(UsbManager.ACTION_USB_ACCESSORY_ATTACHED)
+            filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED)
+            registerReceiver(broadcastReceiver, filter)
+            try {
+                startUsbConnecting()
+            } catch (e: Exception) {
+
+            }
+
+            onRequestPermissionsResult()
+            return START_NOT_STICKY
         }catch (e: Exception){
-
+            return START_NOT_STICKY
         }
-
-        onRequestPermissionsResult()
-        return START_NOT_STICKY
-
     }
 
     private fun init() {

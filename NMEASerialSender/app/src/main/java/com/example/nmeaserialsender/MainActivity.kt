@@ -138,11 +138,14 @@ class MainActivity : AppCompatActivity() {
         }catch (e: Exception){
 
         }
+        try{
         ForegroundService.startService(this, "Serial GPS is running")
         button4.setOnClickListener(View.OnClickListener {
             ForegroundService.stopService(this)
             Toast.makeText(this, "Background service was killed", Toast.LENGTH_SHORT).show()
-        })
+        })}catch (e: Exception){
+            Toast.makeText(this, "Location Permission required", Toast.LENGTH_SHORT).show()
+        }
         button5.setOnClickListener(View.OnClickListener {
             try {
                 ForegroundService.startService(this,"")
