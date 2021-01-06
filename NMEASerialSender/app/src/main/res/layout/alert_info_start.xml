@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:background="#323232"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/search_border"
+        android:text="Close and accept"
+        android:textColor="@drawable/text"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ScrollView
+            android:layout_width="320dp"
+            android:layout_height="500dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="23dp"
+                    android:paddingBottom="23dp"
+                    android:text="@string/txtCreditstart"
+                    android:textColor="#CCCCCC"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+        </LinearLayout>
+    </ScrollView>
+    <!--android:text="This app in conjunction with a USB-Serial converter can be used to send NMEA packets to legacy devices from the GPS module in your device. The app automatically starts a service so that even if the application is closed location can still be sent. You can also select “always use this app” when connecting the USB-Serial converter, so that as soon as you connect the adapter the data will start flowing. This app is fully open source and you are free to modify it in any way you want. The source code can be found here(гіперссилка на гітхаб). This app was developed by Jackal Studios, if you would like to help or just talk to us, you can find us at (email). Here is our bitcoin wallet if you want to donate: 1PjrWPNF2vtEvGiPUUa1xpGHpBnHyCEFk4"
+                  -->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">NMEA Serial Sender</string>
     <string name="txtCredits">This app in conjunction with a USB-Serial converter can be used to send NMEA packets to legacy devices from the GPS module in your device. The app automatically starts a service so that even if the application is closed location can still be sent. You can also select “always use this app” when connecting the USB-Serial converter, so that as soon as you connect the adapter the data will start flowing. This app is fully open source and you are free to modify it in any way you want. The source code can be found here <a href="https://github.com/Jackal-Studios/NMEASerialSender">https://github.com/Jackal-Studios/NMEASerialSender</a>. This app was developed by Jackal Studios, if you would like to help or just talk to us, you can find us at <font color="#4248f5">sashaluchyn@gmail.com</font> Here is our bitcoin wallet if you want to donate: <font color="#f20707">1PjrWPNF2vtEvGiPUUa1xpGHpBnHyCEFk4</font></string>
+    <string name="txtCreditstart">Dear user, this application uses location in the background in order to send your location in a NMEA string using UART to your devices even when the screen is off or the application is minimized. Your location is processed only on your device and is never sent to third parties. If you do not allow location in the background this application will not be able to operate as designed. In order to allow location in the background for newer devices, go to Settings > Apps > "Nmea Serial Sender" > Permissions > Location > Allow location in the background.</string>
+    <string-array name="baudratearray">
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>115200</item>
+    </string-array>
+
 </resources>
